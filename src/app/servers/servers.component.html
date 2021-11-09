@@ -1,2 +1,13 @@
 <!-- Property Binding used here with disabled wrapper in brackets -->
-<button [disabled]="!allowNewServer" class="btn btn-primary">Add Server</button>
+
+<!-- Event Binding used here by calling onCreateServer -->
+
+<button
+  [disabled]="!allowNewServer"
+  class="btn btn-primary"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
+
+<p>{{ serverCreationStatus }}</p>
